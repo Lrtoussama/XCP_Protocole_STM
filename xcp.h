@@ -2,7 +2,6 @@
 #define XCP_MAX_DATA_LENGTH 255
 
 // CTO 
-
 #define R_POS_PID 0xFF
 
 // Connect 
