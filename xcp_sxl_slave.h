@@ -1,4 +1,4 @@
-#include "xcp.h"
+#include <stdint.h>
 // CTO 
 
 #define R_POS_PID 0xFF
@@ -45,4 +45,9 @@ uint8_t DaqRes = 0x00; // or 0x40 if DAQ is running
 //Pos 4
 #define SESSION_CONFIGURATION_ID 0x0000 // Default session configuration ID
 
+Com_status xcp_com_status = Disconnected;
+int frame_count = 0;
+XCP_sxl_Frame xcp_recv_frame;
+XCP_sxl_Frame xcp_send_frame;
+uint8_t received_frame[XCP_MAX_DATA_LENGTH + 4]; // Buffer to hold the raw received frame (Len + Ctr + Data + Cs)
 

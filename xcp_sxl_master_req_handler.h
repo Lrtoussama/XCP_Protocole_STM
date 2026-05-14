@@ -4,3 +4,4 @@
 #define SYNCH_CMD 0xFC
 
 void Xcp_decode_frame_server();
+void send_xcp_frame();
